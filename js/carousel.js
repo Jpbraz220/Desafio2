@@ -38,19 +38,17 @@ class Carousel {
         let div_title_selector = document.getElementById("carousel-title");
         let car_image;
         let car_title;
-        let car_link;
+        
 
         if (this.firstTime === true){
         car_image = document.createElement("img");
         car_image.setAttribute("id", "imgcar");
         car_title = document.createElement("a");
         car_title.setAttribute("id", "titlecar");
-        car_link = document.createElement("a");
-        car_link.setAttribute("id", "urlcar");
+        
         } else {
             car_image = document.getElementById("imgcar");
             car_title = document.getElementById("titlecar");
-            car_link = document.getElementById("urlcar")
         }
         
         car_title.setAttribute("href", arr[this.count].url);
@@ -58,7 +56,7 @@ class Carousel {
         
         car_image.src = "./img/" + arr[this.count].image;
         
-        div_selector.appendChild(car_link);
+        
         div_selector.appendChild(car_image);
         div_title_selector.appendChild(car_title);
 
